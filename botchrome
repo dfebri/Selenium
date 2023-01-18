@@ -1,0 +1,10 @@
+from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.keys import Keys
+
+#test running browser
+bot = webdriver.Chrome(ChromeDriverManager().install())
+bot.get('https://the-internet.herokuapp.com/login')
+bot.find_element_by_id ("username").send_keys("tomsmith")
+bot.find_element_by_id ("password").send_keys("SuperSecretPassword!")
+bot.find_element_by_id ("login-button")
